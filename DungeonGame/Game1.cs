@@ -11,11 +11,17 @@ namespace DungeonGame
         GraphicsDeviceManager graphics;
         SpriteBatch spriteBatch;
         Texture2D playerTexture;
+        Texture2D tilemap;
+        Map map;
         public Game1()
             : base()
         {
             graphics = new GraphicsDeviceManager(this);
             Content.RootDirectory = "Content";
+            graphics.PreferredBackBufferHeight = 900;
+            graphics.PreferredBackBufferWidth = 1440;
+            graphics.ApplyChanges();
+            graphics.ToggleFullScreen();
             
         }
 
@@ -28,7 +34,7 @@ namespace DungeonGame
         protected override void Initialize()
         {
             // TODO: Add your initialization logic here
-            Map map = new Map();
+            map = new Map();
             base.Initialize();
         }
 
@@ -41,6 +47,7 @@ namespace DungeonGame
             // Create a new SpriteBatch, which can be used to draw textures.
             spriteBatch = new SpriteBatch(GraphicsDevice);
             playerTexture = Content.Load<Texture2D>("SquareGuy.png");
+            tilemap = Content.Load<Texture2D>("tilemap.png");
             // TODO: use this.Content to load your game content here
         }
 
@@ -77,8 +84,9 @@ namespace DungeonGame
             GraphicsDevice.Clear(Color.CornflowerBlue);
 
             // TODO: Add your drawing code here
+            map.Draw(spriteBatch, tilemap);
             spriteBatch.Begin();
-            spriteBatch.Draw(playerTexture, new Rectangle(0,0,91,91),Color.White);
+            //spriteBatch.Draw(playerTexture, new Rectangle(0,0,91,91),Color.White);
             spriteBatch.End();
 
             base.Draw(gameTime);

@@ -24,3 +24,4 @@ C:\Users\Goosfraba\documents\visual studio 2013\Projects\DungeonGame\DungeonGame
 C:\Users\Goosfraba\documents\visual studio 2013\Projects\DungeonGame\DungeonGame\obj\x86\Debug\DungeonGame.exe
 C:\Users\Goosfraba\documents\visual studio 2013\Projects\DungeonGame\DungeonGame\obj\x86\Debug\DungeonGame.pdb
 C:\Users\Goosfraba\documents\visual studio 2013\Projects\DungeonGame\DungeonGame\bin\Windows\Debug\Content\SquareGuy.png
+C:\Users\Goosfraba\documents\visual studio 2013\Projects\DungeonGame\DungeonGame\bin\Windows\Debug\Content\tilemap.png
